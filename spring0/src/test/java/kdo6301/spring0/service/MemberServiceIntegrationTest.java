@@ -22,12 +22,11 @@ class MemberServiceIntegrationTest {
     @Autowired MemberRepository memberRepository;
 
     @Test
-    @Commit
     void join()
     {
         //given
         Member member = new Member();
-        member.setName("Kimwoongs");
+        member.setName("Kimawoong");
         //when
         Long saveId = memberService.join(member);
 
@@ -35,6 +34,7 @@ class MemberServiceIntegrationTest {
         Member One = memberService.findOne(saveId).get();
         Assertions.assertThat(member.getName()).isEqualTo(One.getName());
     }
+
     @Test
     void 중복회원예외()
     {

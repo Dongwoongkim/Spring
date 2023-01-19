@@ -1,5 +1,6 @@
 package kdo6301.spring0;
 
+import kdo6301.spring0.aop.TimeTraceAop;
 import kdo6301.spring0.repository.*;
 import kdo6301.spring0.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
